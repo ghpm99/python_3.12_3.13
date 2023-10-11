@@ -1,10 +1,3 @@
-from typing import Sequence
-
-type array_number = Sequence[int]
-type array_string = Sequence[str]
-type generic_array[T: (int, str)] = list[T]
-
-
 def max(list: list[int]) -> None:
     max: int = 0
     for item in list:
@@ -14,7 +7,7 @@ def max(list: list[int]) -> None:
     print('max', max)
 
 
-def print_item[T](list: T) -> None:
+def print_item(list) -> None:
     print(list)
 
 
@@ -29,7 +22,7 @@ array_generic_obj = ['T', 4, 'u', 1, True]
 
 
 max(array_number_obj)
-# max(array_str_obj)
+max(array_str_obj)
 max(array_generic_obj)
 
 print_item(array_number_obj)
