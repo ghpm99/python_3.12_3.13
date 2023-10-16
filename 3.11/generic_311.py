@@ -1,3 +1,10 @@
+from typing import TypeAlias
+
+array_number: TypeAlias = list[int]
+array_string: TypeAlias = list[str]
+generic_array: TypeAlias = list[int | str]
+
+
 def max(list: list[int]) -> None:
     max: int = 0
     for item in list:
@@ -16,9 +23,9 @@ def sort_item(list: (list[int] | list[str])) -> None:
     print(sorted_list)
 
 
-array_number_obj: list[int] = [1, 2, 3, 52, 44, 7]
-array_str_obj: list[str] = ['p', 'y', 't', 'h', 'o', 'n']
-array_generic_obj = ['T', 4, 'u', 1, True]
+array_number_obj: array_number = [1, 2, 3, 52, 44, 7]
+array_str_obj: array_string = ['p', 'y', 't', 'h', 'o', 'n']
+array_generic_obj: generic_array = ['T', 4, 'u', 1, True]
 
 
 max(array_number_obj)

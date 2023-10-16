@@ -29,8 +29,8 @@ array_generic_obj = ['T', 4, 'u', 1, True]
 
 
 max(array_number_obj)
-# max(array_str_obj)
-# max(array_generic_obj)
+max(array_str_obj)
+max(array_generic_obj)
 
 print_item(array_number_obj)
 print_item(array_str_obj)
@@ -38,4 +38,4 @@ print_item(array_generic_obj)
 
 sort_item(array_number_obj)
 sort_item(array_str_obj)
-# sort_item(array_generic_obj)
+sort_item(array_generic_obj)

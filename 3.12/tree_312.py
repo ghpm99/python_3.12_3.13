@@ -1,10 +1,11 @@
-from typing import TypedDict, Unpack
+from typing import NotRequired, TypedDict, Unpack
 
 
 # Nó da arvore extende um typedDict, sendo assim é um dict
 class Node(TypedDict):
     key: int
     value: str
+    version: NotRequired[float]
 
 
 class TreeNode:
@@ -38,6 +39,11 @@ def print_tree(**kwargs: Unpack[Node]) -> None:
     print(kwargs)
 
 
+def print_loop(*args: int, **kwargs: Unpack[Node]) -> None:
+    for i in range(*args):
+        print(i, kwargs)
+
+
 # Chama função de impressao de nó de forma ordenada
 def inroder(root: (TreeNode | None)) -> None:
     if root is None:
@@ -54,16 +60,20 @@ def insert_tree(arr: list[Node]) -> None:
 
 root = TreeNode({'key': 5, 'value': 'root'})
 array_node: list[Node] = [
-    {'key': 10, 'value': 'python'},
+    {'key': 10, 'value': 'python', 'version': 1.0},
     {'key': 4, 'value': 'typed'},
-    {'key': 3, 'value': 'java'},
-    {'key': 1, 'value': 'javascript'},
-    {'key': 9, 'value': 'node'},
+    {'key': 3, 'value': 'java', 'version': 1.0},
+    {'key': 1, 'value': 'javascript', 'version': 1.0},
+    {'key': 9, 'value': 'node', 'version': 1.0},
     {'key': 2, 'value': 'thread'},
     {'key': 6, 'value': 'binary'},
     {'key': 8, 'value': 'recursive'},
     {'key': 7, 'value': 'hash'},
-    {'key': 0, 'value': 'bash'},
+    {'key': 0, 'value': 'bash', 'version': 1.0},
 ]
 insert_tree(array_node)
 inroder(root)
+
+print_tree(key=15, value='print externo')
+
+print_loop(2, key=20, value='print em loop')
