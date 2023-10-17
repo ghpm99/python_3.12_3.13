@@ -15,3 +15,19 @@ Melhorias gerais:
 	-> line<6> Print de locals
 	-> line<8> Define um dict de animais com sons
 	-> line<14> utiliza um dict comprehension para gerar um array de str
+
+Melhorias nas bibliotecas:
+	itertools:
+
+	Adicionado a função batched() que realiza um split de iteravel.
+
+	-> line<4> cria um array usando comprehension
+	-> line<5> chama a função batched passando o array inicial e o tamanho de cada objeto, o resultado é um iteravel e pode ser passado para um list
+	-> line<6> imprime o resultado
+
+	math:
+
+	Adicionado a função sumprod que realiza a soma de produtos, os argumentos é um array multidimensional de tamanhos iguais
+
+	-> line<9> calcula o produto do resultado do split
+	-> line<10> imprime o resultado
