@@ -21,13 +21,18 @@ Melhorias nas bibliotecas:
 
 	Adicionado a função batched() que realiza um split de iteravel.
 
-	-> line<4> cria um array usando comprehension
-	-> line<5> chama a função batched passando o array inicial e o tamanho de cada objeto, o resultado é um iteravel e pode ser passado para um list
-	-> line<6> imprime o resultado
+	-> line<5> cria um array usando comprehension
+	-> line<6> chama a função batched passando o array inicial e o tamanho de cada objeto, o resultado é um iteravel e pode ser passado para um list
+	-> line<7> imprime o resultado
 
 	math:
 
 	Adicionado a função sumprod que realiza a soma de produtos, os argumentos é um array multidimensional de tamanhos iguais
 
-	-> line<9> calcula o produto do resultado do split
-	-> line<10> imprime o resultado
+	-> line<10> calcula o produto do resultado do split
+	-> line<11> imprime o resultado
+
+	tempfile:
+
+	O retorno do metodo mkdtemp (cria uma pasta temporaria) agora é o caminho absoluto em relação a pasta raiz
+	-> line<13> cria uma pasta temporaria e imprime o caminho
