@@ -1,0 +1,17 @@
+Melhorias gerais:
+	Improved Error Messages -> file: 3.12/error_msg.py
+
+	-> line<1> Sugestão do nome correto para importação
+	-> line<3> Sugestão da lib para importação
+	-> line<5> Demonstrar que nao funciona para funções proprias
+	-> line<7,9> Sugestão de nome correto de função
+
+	PEP 709: Comprehension inlining -> file: 3.12/local_env.py
+	Compreensões agora rodam no mesmo frame que o codigo que a chamou, nao criando uma nova função de uso unico. Ganho de performance. 
+
+	Compreensões eram como chamadas de funções gerando um novo frame, e o python empilha frames ate um frame retornar um valor e entao devolve esse valor para o frame que fez a chamada, agora compreensao roda no mesmo escopo que foi definido nao realizando mais essa criação e empilhamento, possuindo acesso ao contexto local da frame e ganhando performance.
+
+	-> line<3,4> Declarações de variaveis aleatorias
+	-> line<6> Print de locals
+	-> line<8> Define um dict de animais com sons
+	-> line<14> utiliza um dict comprehension para gerar um array de str
