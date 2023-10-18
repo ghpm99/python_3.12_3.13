@@ -2,6 +2,7 @@ from typing import NotRequired, TypedDict, Unpack
 
 
 # Nó da arvore extende um typedDict, sendo assim é um dict
+# pode receber tipos diferentes em cada variavel, nao precisa ser homogenea em sua declaração
 class Node(TypedDict):
     key: int
     value: str
@@ -39,7 +40,9 @@ def print_tree(**kwargs: Unpack[Node]) -> None:
     print(kwargs)
 
 
+# args é do tipo homogenea int, já kwargs recebe todas declarações de chave e tipo de Node, no caso int/str e um float opcional
 def print_loop(*args: int, **kwargs: Unpack[Node]) -> None:
+    print(args, kwargs)
     for i in range(*args):
         print(i, kwargs)
 

@@ -57,3 +57,11 @@ Tipagem:
 	-> line<4> declara a classe generica animal com uma função de comunicar
 	-> line<9, 16, 23> implements animais que herdam a classe generica e sobrescreve o metodo comunicar
 
+	PEP 692: file: 3.12/tree_312.py
+
+	Agora é possivel tipar o kw args(keyword arguments = argumentos com chave/nome) usando o unpack
+
+	-> line<5> define a classe Node que herda TypedDict, essa classe representa um nó na arvore
+	-> line<38> cria uma função de impressao de um nó da arvore que recebe um Unpack de Node como tipo do kwargs
+	-> line<42> mostra diferença entre args e kwargs
+
