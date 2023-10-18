@@ -14,13 +14,17 @@ def max(list: array_number) -> None:
     print('max', max)
 
 
-def print_item[T](list: T) -> None:
+def print_item(list) -> None:
     print(list)
 
 
 def sort_item(list: (array_number | array_string)) -> None:
     sorted_list = sorted(list)
     print(sorted_list)
+
+
+def sum[T](x: T, y: T) -> T:
+    return x + y
 
 
 array_number_obj: array_number = [1, 2, 3, 52, 44, 7]
@@ -30,8 +34,8 @@ array_generic_right: generic_array = ['T', 'u', 4, 65, 'w']
 
 
 max(array_number_obj)
-max(array_str_obj)
-max(array_generic_obj)
+# max(array_str_obj)
+# max(array_generic_obj)
 
 print_item(array_number_obj)
 print_item(array_str_obj)
@@ -39,4 +43,27 @@ print_item(array_generic_obj)
 
 sort_item(array_number_obj)
 sort_item(array_str_obj)
-sort_item(array_generic_obj)
+# sort_item(array_generic_obj)
+
+print(sum(1, 2))
+# print(sum(1, '2'))
+
+
+class GenericSum[T]:
+
+    x: T
+    y: T
+
+    def __init__(self, x: T, y: T):
+        self.x = x
+        self.y = y
+
+    def sum(self) -> T:
+        return self.x + self.y
+
+
+sum_int = GenericSum[int](4, 5)
+print(sum_int.sum())
+
+sum_str = GenericSum[str]('a', 'b')
+print(sum_str.sum())
