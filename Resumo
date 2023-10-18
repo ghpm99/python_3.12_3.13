@@ -17,6 +17,7 @@ Melhorias gerais:
 	-> line<14> utiliza um dict comprehension para gerar um array de str
 
 Melhorias nas bibliotecas:
+	Improved Modules -> file: 3.12/modules.py
 	itertools:
 
 	Adicionado a função batched() que realiza um split de iteravel.
@@ -36,3 +37,16 @@ Melhorias nas bibliotecas:
 
 	O retorno do metodo mkdtemp (cria uma pasta temporaria) agora é o caminho absoluto em relação a pasta raiz
 	-> line<13> cria uma pasta temporaria e imprime o caminho
+
+	typing: file: 3.12/typing_312.py
+
+	Adicionado o decorator @runtime_checkable para realizar o check se a classe atende o protocolo em runtime
+
+	-> line<4> declara que o tipo vai ser checkado runtime
+	-> line<16> imprime se seguros é do tipo ecommerce
+	-> line<18,19> adiciona variaveis para seguros
+	-> line<21> imprime se seguros é do tipo ecommerce
+	-> line<23> inclui id para o protocolo ecommerce
+	-> line<25> imprime se seguros é do tipo ecommerce, mas o protocolo nao atualiza em runtime entao mantem True
+
+	
