@@ -65,5 +65,11 @@ Tipagem:
 	-> line<38> cria uma função de impressao de um nó da arvore que recebe um Unpack de Node como tipo do kwargs
 	-> line<42> mostra diferença entre args e kwargs
 
+	PEP 695: file: 3.12/generic_312.py
+
+	Adicionado o modificador type para sinalizar que a declaração nao é uma variavel e sim um tipo.
+
+	-> line<3, 4, 5> exemplos de declarações usando type 
+
 CLI:
 	Adicionado a geração de uuid atraves do CLI utilizando o comando: python -m uuid
