@@ -2,7 +2,7 @@ from typing import Sequence
 
 type array_number = Sequence[int]
 type array_string = Sequence[str]
-type generic_array[T: (int, str)] = list[T]
+type generic_array[T: (int, str)] = Sequence[T]
 
 
 def max(list: array_number) -> None:
@@ -25,7 +25,8 @@ def sort_item(list: (array_number | array_string)) -> None:
 
 array_number_obj: array_number = [1, 2, 3, 52, 44, 7]
 array_str_obj: array_string = ['p', 'y', 't', 'h', 'o', 'n']
-array_generic_obj = ['T', 4, 'u', 1, True]
+array_generic_obj: generic_array = ['T', 4, 'u', 1, 1.45, True]
+array_generic_right: generic_array = ['T', 'u', 4, 65, 'w']
 
 
 max(array_number_obj)

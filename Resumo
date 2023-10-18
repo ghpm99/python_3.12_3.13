@@ -65,3 +65,5 @@ Tipagem:
 	-> line<38> cria uma função de impressao de um nó da arvore que recebe um Unpack de Node como tipo do kwargs
 	-> line<42> mostra diferença entre args e kwargs
 
+CLI:
+	Adicionado a geração de uuid atraves do CLI utilizando o comando: python -m uuid
