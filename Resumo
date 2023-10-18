@@ -73,3 +73,7 @@ Tipagem:
 
 CLI:
 	Adicionado a geração de uuid atraves do CLI utilizando o comando: python -m uuid
+
+Extras:
+	PEP 684: Per-Interpreter GIL
+	PEP 669: sys.monitoring for CPython
